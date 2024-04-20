@@ -1,6 +1,6 @@
 package com.uvic.ad32023.pTort;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.Assert.*;
 

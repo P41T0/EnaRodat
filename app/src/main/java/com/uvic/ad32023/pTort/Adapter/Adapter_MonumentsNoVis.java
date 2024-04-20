@@ -24,8 +24,8 @@ import java.util.ArrayList;
 
 public class Adapter_MonumentsNoVis extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private Context context;
-    private int resourceId;
-    private ArrayList<Monument> model;
+    private final int resourceId;
+    private final ArrayList<Monument> model;
 
 
     public Adapter_MonumentsNoVis(ArrayList<Monument> model) {

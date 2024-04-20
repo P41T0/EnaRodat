@@ -17,14 +17,13 @@ import java.util.ArrayList;
 
 public class CanviDescs extends AppCompatActivity {
     private EditText textDesc;
-    private TextView nomElement;
     private int numMonuments;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
         textDesc = findViewById(R.id.DescMon);
-        nomElement = findViewById(R.id.NomMonument);
+        TextView nomElement = findViewById(R.id.NomMonument);
         Intent intent = getIntent();
         if (intent.hasExtra("TextDesc")) {
 

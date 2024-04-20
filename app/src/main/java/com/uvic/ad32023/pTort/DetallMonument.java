@@ -52,7 +52,7 @@ public class DetallMonument extends AppCompatActivity {
     private static final int RESULT_CAPTURE_IMAGE = 1000;
     private static final int PERMISSION_REQUEST_CAMERA = 1;
     private static final int PERMISSION_REQUEST_READ_STORAGE = 2;
-    private static final int RESULT_LOAD_GALERY_IMAGE = 5;
+    private static final int RESULT_LOAD_GALLERY_IMAGE = 5;
     private int userOption;
 
     @Override
@@ -274,7 +274,7 @@ public class DetallMonument extends AppCompatActivity {
                 if (Build.VERSION.SDK_INT <= 33) {//Permís per a accedir a la galeria versions anteriors a Android 13
                     if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
                         Intent i = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                        startActivityForResult(i, RESULT_LOAD_GALERY_IMAGE);
+                        startActivityForResult(i, RESULT_LOAD_GALLERY_IMAGE);
 
                     } else {
                         requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, PERMISSION_REQUEST_READ_STORAGE);
@@ -283,7 +283,7 @@ public class DetallMonument extends AppCompatActivity {
                     if (checkSelfPermission(Manifest.permission.READ_MEDIA_IMAGES) == PackageManager.PERMISSION_GRANTED) {
                         Intent i = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
 
-                        startActivityForResult(i, RESULT_LOAD_GALERY_IMAGE);
+                        startActivityForResult(i, RESULT_LOAD_GALLERY_IMAGE);
                     } else {
                         requestPermissions(new String[]{Manifest.permission.READ_MEDIA_IMAGES}, PERMISSION_REQUEST_READ_STORAGE);
                     }
@@ -324,7 +324,7 @@ public class DetallMonument extends AppCompatActivity {
         } else if (userOption == 1) {
             if (resultCode == RESULT_OK) {
 
-                if (requestCode == RESULT_LOAD_GALERY_IMAGE) {
+                if (requestCode == RESULT_LOAD_GALLERY_IMAGE) {
                     if (resultCode == RESULT_OK) {
 
 
